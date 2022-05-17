@@ -1,10 +1,12 @@
 
 import './App.css';
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
   return (
     <div className="App">
-      <h1>Lubricentro</h1>
+    <NavBar / >
+      <h1>Repuestos</h1>
     </div>
   );
 }
