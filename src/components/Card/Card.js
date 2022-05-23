@@ -5,8 +5,13 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import '../Card/Card.css'
+import CountItem from '../Count/ItemCount';
+
 
 const Item = ({ imagen, producto, precio }) =>{
+   
+
+
     return(
       <div className='card'>      
     <Card sx={{ maxWidth: 345 }}>
@@ -22,9 +27,11 @@ const Item = ({ imagen, producto, precio }) =>{
         ${precio}
         </Typography>
       </CardContent>
+        <CountItem/>
       <CardActions>
-        <Button variant="contained" disableElevation>Agregar</Button>
-        
+         <div className='add'>     
+        <Button color="success" >Agregar</Button>
+        </div>
       </CardActions>
     </Card>
     </div>

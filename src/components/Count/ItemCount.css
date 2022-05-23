@@ -1,0 +1,8 @@
+.contador{
+    display: flex;
+     width: 100%;
+    justify-content: center;
+}
+.numerador{
+    margin: 0 50px ;
+}
