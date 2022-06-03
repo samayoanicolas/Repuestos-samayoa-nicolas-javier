@@ -36,7 +36,7 @@ const CardList=()=>{
           products.map((productos) =>{
               return(
                 <Grid item md={3}>
-                     <Item imagen={productos.imagen} producto={productos.producto} precio={productos.precio} />
+                     <Item imagen={productos.imagen} producto={productos.producto} precio={productos.precio} id={productos.id} />
                 </Grid>
               )
               

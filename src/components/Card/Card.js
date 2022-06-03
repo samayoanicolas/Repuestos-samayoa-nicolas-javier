@@ -6,11 +6,12 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import '../Card/Card.css'
 import CountItem from '../Count/ItemCount';
+import { Link } from 'react-router-dom';
 
 
-const Item = ({ imagen, producto, precio }) =>{
+const Item = ({ imagen, producto, precio, id }) =>{
    
-
+console.log("muestra:", id)
 
     return(
       <div className='card'>      
@@ -31,6 +32,7 @@ const Item = ({ imagen, producto, precio }) =>{
       <CardActions>
          <div className='add'>     
         <Button color="success" >Agregar</Button>
+        <Button color="success" ><Link to={`/item/${id}`}>Detalle</Link></Button>
         </div>
       </CardActions>
     </Card>

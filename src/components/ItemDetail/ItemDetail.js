@@ -5,20 +5,26 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import '../Card/Card.css'
 
-const ItemDetail = ({info})=>{
+const ItemDetail = ({data}) => {
+
+   console.log ("esto es data:", data)
+
     return(
       <div className='card'>      
       <Card sx={{ maxWidth: 345 }}>
       
         <CardContent>
          <div>
-               <img src={`/${info.image}`}/>
+         <img src={data.imagen}/> 
           </div>
           <Typography gutterBottom variant="h5" component="div">
-          {info.producto}
+        {data.producto}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-          ${info.precio}
+          ${data.precio}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+          Cantidad disponibles: {data.stock}
           </Typography>
         </CardContent>
       </Card>

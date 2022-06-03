@@ -1,32 +1,39 @@
 import { useEffect, useState} from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
-import { productoSolo } from "../../data/productsMocks"
+import productos  from "../../data/productsMocks"
+import { useParams } from "react-router-dom";
 
 
 
 const ItemDetailContainer = () =>{  
-   const [prod, setProd]= useState({}) 
-   const getItem = () =>{
-      return new Promise((resolve, reject)=>{
-          setTimeout(()=>{
-           resolve(productoSolo)
-          },2000)
-      })
-   }
+   const [prod, setProduct]= useState({});
+   const {id} =useParams()
+   
+   
+   // const getItem = () =>{
+   //    return new Promise((resolve, reject)=>{
+   //        setTimeout(()=>{
+   //         resolve(productoSolo)
+   //        },2000)
+   //    })
+   // }
    useEffect(()=>{
-      getItem()
-      .then((res)=>{
-          setProd(res)
-      })
-   },[])
+      // getItem()
+      // .then((res)=>{
+      //     setProduct(res)
+      // })
+      const productFilter = productos.find((product) => {
+         return product.id === parseInt(id);
+       });
+       setProduct(productFilter);
+   },{})
  
 
    return(
       <>
-      <div>Contenedor Item</div>
-      <ItemDetail info={prod} />
+      <ItemDetail data={prod} />
       </>   
    )
-}
+};
 
 export default ItemDetailContainer

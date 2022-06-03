@@ -1,24 +1,33 @@
 
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CardList from './components/Card/CardList';
 import NavBar from './components/NavBar/NavBar';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Contacto from './pages/contacto';
+import PaginaNoDisponible from './pages/paginaNoDisponible';
+import Detalle from './pages/detalle';
 
   
 
 function App() {
   return (
-    <div className="App">
-
-       <NavBar />
-       <h1>"Repuestos"</h1> 
-       <div><CardList/></div> 
-       <hr></hr>
-       <ItemDetailContainer/>
-   
-      
-    </div>
-   
+    
+        <div className="App">
+          
+          <BrowserRouter>
+          <NavBar />
+             <Routes>
+             
+                <Route exact path='/' element={<CardList/>}/>
+                <Route exact path='/category/:id' element={<CardList/>}/>
+                <Route exact path='/item/:id' element={<Detalle/>}/>
+                <Route exact path='/contacto' element={<Contacto/>}/>
+                <Route exact path='/*' element={<PaginaNoDisponible/>}/>
+                   
+             </Routes>
+          </BrowserRouter>
+        </div>
+    
   )
 }
 

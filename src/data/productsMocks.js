@@ -28,17 +28,16 @@ const productos = [
     },
 ]
 
-const productoSolo=[
-    {   
+const productoSolo = {   
         id:1,
-        imagen : 'img/nafta.jpg',
+        imagen : '/img/nafta.jpg',
         producto: 'Filtro de Nafta',
         precio: 2300,
         descripcion:'',
         stock : 15
     
     }
-]
+
 
 export default productos
 export {productoSolo}
