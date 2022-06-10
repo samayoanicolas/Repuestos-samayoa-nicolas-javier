@@ -7,11 +7,14 @@ import Typography from '@mui/material/Typography';
 import '../Card/Card.css'
 import CountItem from '../Count/ItemCount';
 import { Link } from 'react-router-dom';
+import CartContext from '../Context/CardContext'
+import { useContext } from 'react';
+
 
 
 const Item = ({ imagen, producto, precio, id }) =>{
-   
-console.log("muestra:", id)
+   const {addProductToCart} = useContext(CartContext)
+
 
     return(
       <div className='card'>      
@@ -19,7 +22,7 @@ console.log("muestra:", id)
     
       <CardContent>
        <div>
-            <img src={`./${imagen}`}/> 
+            <img src={`./${imagen}`} alt="#" /> 
         </div>
         <Typography gutterBottom variant="h5" component="div">
         {producto}
@@ -31,7 +34,7 @@ console.log("muestra:", id)
         <CountItem/>
       <CardActions>
          <div className='add'>     
-        <Button color="success" >Agregar</Button>
+        <Button color="success" onClick={ () => addProductToCart({ imagen, producto, precio, id })} >Agregar</Button>
         <Button color="success" ><Link to={`/item/${id}`}>Detalle</Link></Button>
         </div>
       </CardActions>

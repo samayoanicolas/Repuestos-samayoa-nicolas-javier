@@ -6,6 +6,7 @@ import NavBar from './components/NavBar/NavBar';
 import Contacto from './pages/contacto';
 import PaginaNoDisponible from './pages/paginaNoDisponible';
 import Detalle from './pages/detalle';
+import { CartProvider } from './components/Context/CardContext';
 
   
 
@@ -13,7 +14,7 @@ function App() {
   return (
     
         <div className="App">
-          
+          <CartProvider>
           <BrowserRouter>
           <NavBar />
              <Routes>
@@ -26,6 +27,7 @@ function App() {
                    
              </Routes>
           </BrowserRouter>
+          </CartProvider>
         </div>
     
   )
