@@ -3,7 +3,7 @@ import { useState } from 'react';
 import '../Count/ItemCount.css'
 
 
-const CountItem=({setShowButton})=>{
+const CountItem=({setShowButton, addProductToCart})=>{
     const [count, setCount] = useState(0)
     const stock = 7;
     
@@ -24,9 +24,10 @@ const CountItem=({setShowButton})=>{
         <Button variant="contained" color="primary" onClick={masUno} disabled= {count===stock}>+</Button>
 
       </div>
-      <Button color="success" onClick={() => setShowButton(true)} >Comprar</Button>
+      <Button color="success" onClick={() => setShowButton(true)} >Ccccc</Button>
+      
      </>
     )
 }
-
+  
 export default CountItem

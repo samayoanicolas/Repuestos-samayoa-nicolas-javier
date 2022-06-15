@@ -4,7 +4,8 @@ import Menu from '@mui/material/Menu';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CartContext from '../Context/CardContext'
 import '../Cart/Cart.css'
-
+import { Button } from '@mui/material';
+import {Link} from '@mui/material';
 const CartWidget = () =>  {
     const { cartListItems, removeItemFromCart } = useContext(CartContext)
     const [anchorEl, setAnchorEl] = useState(null);
@@ -41,6 +42,7 @@ const CartWidget = () =>  {
                                 <button onClick={() => removeItemFromCart(item.id)}>
                                     <DeleteIcon />
                                 </button>
+                                <Button color="success" ><Link to={'/cart'}> ir al Carrito </Link></Button>
                             </div>
                         </div>
                         )

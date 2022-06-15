@@ -9,9 +9,11 @@ const CartProvider = ({children}) => {
     const addProductToCart = (product) => {
         let isInCart = cartListItems.find(cartItem => cartItem.id === product.id)
         if(!isInCart) {
-            setTotalPrice(totalPrice + product.price)
+            setTotalPrice(totalPrice + product.precio)
             return setCartListItems(cartListItems => [...cartListItems, product])
+           
         }
+        
     }
     const removeItemFromCart = (itemId) => {
         const itemToRemove = cartListItems.find(item => item.id === itemId);

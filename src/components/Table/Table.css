@@ -1,0 +1,24 @@
+
+
+.col-cart-table__head{
+    display: flex;
+    font-size: 20px;
+   
+    
+}
+.tab{
+    width: 20%;
+ 
+}
+.cart-table__content{
+   display: flex;
+}
+.cont{
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+.cart-footer{
+    display: flex;
+    justify-content: space-between;
+}

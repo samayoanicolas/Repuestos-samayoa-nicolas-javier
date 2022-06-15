@@ -4,6 +4,27 @@
     color: white;
     margin-left: 1100px;
 }
+.cart-prod__image{
+    margin-left: 25px;
+    width:100px;
+    height: 100px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
 
+.item-cart-prod{
+    display: block;
+    margin-right: 150px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.cart-prod__info{
+    margin-left: 180px ;
+}
+.cart-prod__action{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 400px;
+}
 
 

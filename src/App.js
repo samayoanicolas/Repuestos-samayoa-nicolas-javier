@@ -7,6 +7,7 @@ import Contacto from './pages/contacto';
 import PaginaNoDisponible from './pages/paginaNoDisponible';
 import Detalle from './pages/detalle';
 import { CartProvider } from './components/Context/CardContext';
+import Cart from './pages/cart';
 
   
 
@@ -23,6 +24,8 @@ function App() {
                 <Route exact path='/category/:id' element={<CardList/>}/>
                 <Route exact path='/item/:id' element={<Detalle/>}/>
                 <Route exact path='/contacto' element={<Contacto/>}/>
+                <Route exact path='/cart' element={<Cart/>}/>
+
                 <Route exact path='/*' element={<PaginaNoDisponible/>}/>
                    
              </Routes>
